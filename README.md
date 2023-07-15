@@ -1,5 +1,4 @@
 # Generate summaries from texts using Streamlit
-### Group 5 - Software Design and implementation - 6112/8112
 ## Instruction
 * Create a virtual python 3.8 environment
 * install [tensorflow](https://www.tensorflow.org/install/pip) or [PyTorch](https://pytorch.org/get-started/locally/)
