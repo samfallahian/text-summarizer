@@ -40,7 +40,8 @@ def view_all_users():
     return data
 
 
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_summarizer():
     model = pipeline("summarization", device=0)
     return model
@@ -71,11 +72,13 @@ def generate_chunks(inp_str):
 
 
 if 'isLogin' not in st.session_state:
-    st.session_state['isLogin'] = False
+    # st.session_state['isLogin'] = False
+    st.session_state['isLogin'] = True
 
 st.title("Summarize Text")
 
-menu = ["Login", "SignUp", "Home"]
+# menu = ["Login", "SignUp", "Home"]
+menu = ["Home"]
 choice = st.sidebar.selectbox("Menu", menu)
 summarizer = load_summarizer()
 
